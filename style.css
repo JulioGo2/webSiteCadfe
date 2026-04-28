@@ -100,7 +100,8 @@ nav a:hover {
     font-size: 3em;
     margin-bottom: 20px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-    background: rgba(0, 0, 0, 0.35);   /* cajita detrás del título */
+    background: rgba(180, 130, 30, 0.80);
+    border: 1px solid rgba(255, 210, 80, 0.5);
     padding: 10px 30px;
     border-radius: 8px;
 }
@@ -108,7 +109,8 @@ nav a:hover {
 .carousel-overlay p {
     font-size: 1.3em;
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
-    background: rgba(0, 0, 0, 0.30);   /* cajita detrás del subtítulo */
+    background: rgba(150, 100, 10, 0.70);
+    border: 1px solid rgba(255, 210, 80, 0.4);
     padding: 6px 20px;
     border-radius: 6px;
 }
