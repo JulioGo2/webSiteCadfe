@@ -78,7 +78,6 @@ nav a:hover {
     background-position: center;
 }
 
-/* Carrusel - SOLO CAMBIA ESTO */
 .carousel-overlay {
     position: absolute;
     top: 0;
@@ -88,7 +87,7 @@ nav a:hover {
     background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.15) 0%,
-        rgba(0, 0, 0, 0.65) 100%
+        rgba(0, 0, 0, 0.55) 100%
     );
     display: flex;
     align-items: center;
@@ -100,12 +99,18 @@ nav a:hover {
 .carousel-overlay h2 {
     font-size: 3em;
     margin-bottom: 20px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.35);   /* cajita detrás del título */
+    padding: 10px 30px;
+    border-radius: 8px;
 }
 
 .carousel-overlay p {
     font-size: 1.3em;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.55);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.30);   /* cajita detrás del subtítulo */
+    padding: 6px 20px;
+    border-radius: 6px;
 }
 
 .carousel-dots {
