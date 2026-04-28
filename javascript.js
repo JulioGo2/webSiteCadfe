@@ -13,11 +13,30 @@ slides.forEach((_, index) => {
     dotsContainer.appendChild(dot);
 });
 
-// Ir a un slide específico
 function goToSlide(n) {
-    currentSlide = n;
-    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-    updateDots();
+    const overlays = document.querySelectorAll('.carousel-overlay');
+    
+    overlays.forEach(o => {
+        o.style.transition = 'opacity 0.4s ease';
+        o.style.opacity = '0';
+    });
+
+    setTimeout(() => {
+        currentSlide = n;
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateDots();
+
+      
+        setTimeout(() => {
+            overlays.forEach(o => { o.style.opacity = '1'; });
+        }, 500);
+
+    }, 400);
+}
+
+function nextSlide() {
+    const next = (currentSlide + 1) % slides.length;
+    goToSlide(next);
 }
 
 // Actualizar dots activos
@@ -27,11 +46,6 @@ function updateDots() {
     });
 }
 
-// Siguiente slide
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    goToSlide(currentSlide);
-}
 
 // Auto-avance del carrusel cada 5 segundos
 setInterval(nextSlide, 5000);
